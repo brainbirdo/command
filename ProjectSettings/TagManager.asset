@@ -3,20 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NavMesh
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NavMesh
   - Water
   - UI
   - 
   - 
   - 
   - 
-  - Post-Processing
-  - 
+  - 2D Post-Processing
+  - 3D Post-Processing
   - 
   - 
   - 
