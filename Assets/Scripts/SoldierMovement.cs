@@ -6,19 +6,27 @@ using UnityEngine.AI;
 
 public class SoldierMovement : MonoBehaviour
 {
+    [Header("Soldier Attributes")]
+    public float soldierHealth = 100f; // HP
+    public float soldierAttack = 5f; // Attack power
+    public float soldierSignal = 5f; // Signal strength for comms
+    public float soldierSpeed = 1f; // Movement speed
+    public bool seenByEnemy = false; // If the soldier has been spotted and is being targeted by Enemy.
+
     [Header("Pathfinding")]
-    [SerializeField] GameObject target;
+    public GameObject target;
+    Collider2D coll;
     NavMeshAgent agent;
-    [SerializeField] private bool hasTarget = true;
+    public bool hasTarget = true;
     public Camera cam;
-    public CircleCollider2D coll;
 
     [Header("Selection Sprites")]
-    [SerializeField] private bool isSelected;
+    public bool isSelected;
     private SpriteRenderer spriteRenderer;
     public Sprite selectedSprite;
     public Sprite unselectedSprite;
 
+    // Add trigger collider to target. When in target's collider, 
 
     void Start()
     {
@@ -27,15 +35,16 @@ public class SoldierMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
         ////END
     }
 
-    // Issues:
-    // - It will move upon selection to wherever you selected.
-    // - It will move anywhere rather than along a grid.
 
     void Update()
     {
+
+        agent.speed = soldierSpeed;
+
         if (hasTarget)
         {
             // Sets and displays Target
@@ -45,7 +54,7 @@ public class SoldierMovement : MonoBehaviour
         if (!hasTarget)
         {
             // Hides Target when there is none
-            target.SetActive(true);
+            target.SetActive(false);
         }
 
         SoldierSelection();
@@ -59,12 +68,13 @@ public class SoldierMovement : MonoBehaviour
 
     private void SoldierSelection()
     {
+        // Selects a soldier if clicked, deselects if right clicked
         if (Input.GetMouseButtonDown(0))
         {
-            Collider2D hit = Physics2D.OverlapPoint(cam.ScreenToWorldPoint(Input.mousePosition));
-            if (hit != null && hit.GetComponent<CircleCollider2D>() != null)
+            coll = Physics2D.OverlapPoint(cam.ScreenToWorldPoint(Input.mousePosition));
+            if (coll != null)
             {
-                isSelected = true;
+                isSelected = (coll.gameObject == gameObject);
             }
         }
 
@@ -87,7 +97,8 @@ public class SoldierMovement : MonoBehaviour
 
     private void TargetSetting()
     {
-        if (Input.GetMouseButtonDown(0))
+        //Sets a Target for the Soldier to move to
+        if (isSelected && Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos = cam.ScreenToWorldPoint(mousePos);
