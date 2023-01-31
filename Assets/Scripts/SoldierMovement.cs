@@ -9,11 +9,12 @@ public class SoldierMovement : MonoBehaviour
     [Header("Pathfinding")]
     [SerializeField] GameObject target;
     NavMeshAgent agent;
-    public bool hasTarget = true;
+    [SerializeField] private bool hasTarget = true;
     public Camera cam;
+    public CircleCollider2D coll;
 
     [Header("Selection Sprites")]
-    public bool isSelected;
+    [SerializeField] private bool isSelected;
     private SpriteRenderer spriteRenderer;
     public Sprite selectedSprite;
     public Sprite unselectedSprite;

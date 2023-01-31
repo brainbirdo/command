@@ -10068,6 +10068,7 @@ MonoBehaviour:
   target: {fileID: 760733300}
   hasTarget: 0
   cam: {fileID: 963194227}
+  coll: {fileID: 672971877}
   isSelected: 0
   selectedSprite: {fileID: 613529443, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
   unselectedSprite: {fileID: 2039997768, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
@@ -31850,6 +31851,7 @@ MonoBehaviour:
   target: {fileID: 1673691}
   hasTarget: 0
   cam: {fileID: 963194227}
+  coll: {fileID: 1939094504}
   isSelected: 0
   selectedSprite: {fileID: 613529443, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
   unselectedSprite: {fileID: 2039997768, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
