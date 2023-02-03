@@ -26,6 +26,13 @@ public class SoldierMovement : MonoBehaviour
     public Sprite selectedSprite;
     public Sprite unselectedSprite;
 
+  
+    [Header("Environment Checks")]
+    public bool touchWater;
+    public bool touchTrees;
+    public bool touchSandHills;
+    public bool touchMountains;
+
     // Add trigger collider to target. When in target's collider, 
 
     void Start()

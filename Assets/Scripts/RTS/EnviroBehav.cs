@@ -3,15 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnviroBehav : MonoBehaviour
-{
-    public SoldierMovement soldierMovement;
-    public GameObject soldier;
 
-    [Header("Environment Checks")]
-    public bool touchWater;
-    public bool touchTrees;
-    public bool touchSandHills;
-    public bool touchMountains;
 
     bool overlapped;
 
@@ -22,7 +14,11 @@ public class EnviroBehav : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Behaviour();
+        if(other.gameObject.GetComponent<SoldierMovement>())
+        {
+            Behaviour(other.GetComponent<SoldierMovement>().gameObject);
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -30,7 +26,7 @@ public class EnviroBehav : MonoBehaviour
     }
 
 
-    public virtual void Behaviour()
+    public virtual void Behaviour(GameObject unit)
     {
 
     }

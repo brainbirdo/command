@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class WaterBehaviour : EnviroBehav
 {
-    public override void Behaviour()
+    public override void Behaviour(GameObject unit)
     {
-        //if Soldier's Box COllider stays in Treebox
+        SoldierMovement soldierMovement = unit.GetComponent<SoldierMovement>();
         touchWater = true;
         soldierMovement.soldierSpeed = 0.25f;
         soldierMovement.soldierSignal = 2f;
