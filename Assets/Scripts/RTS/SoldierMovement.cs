@@ -26,8 +26,9 @@ public class SoldierMovement : MonoBehaviour
     public Sprite selectedSprite;
     public Sprite unselectedSprite;
 
-  
+
     [Header("Environment Checks")]
+    public bool touchNeutralGround;
     public bool touchWater;
     public bool touchTrees;
     public bool touchSandHills;
@@ -37,13 +38,12 @@ public class SoldierMovement : MonoBehaviour
 
     void Start()
     {
-        //DO NOT REMOVE
+        //DO NOT REMOVE OR IT WILL BREAK NAVMESH
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
-        ////END
+        //END
     }
 
 

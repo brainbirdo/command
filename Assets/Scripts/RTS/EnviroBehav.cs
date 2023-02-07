@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnviroBehav : MonoBehaviour
+{
+    public SoldierMovement soldierMovement;
 
-
-    bool overlapped;
-
-    public void EnvironmentChecks()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-       
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.GetComponent<SoldierMovement>())
+        if (other.gameObject.GetComponent<SoldierMovement>())
         {
             Behaviour(other.GetComponent<SoldierMovement>().gameObject);
+            Debug.Log("Collision");
         }
-        
+
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
-    }
+        if (other.gameObject.GetComponent<SoldierMovement>())
+        {
+            // need to reset values
+            Debug.Log("Exit");
+        }
 
+    }
 
     public virtual void Behaviour(GameObject unit)
     {

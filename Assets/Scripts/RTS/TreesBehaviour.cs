@@ -8,7 +8,7 @@ public class TreesBehaviour : EnviroBehav
     {
         SoldierMovement soldierMovement = unit.GetComponent<SoldierMovement>();
         //if Soldier's Box COllider stays in Treebox
-        touchTrees = true;
+        soldierMovement.touchTrees = true;
         soldierMovement.soldierSpeed = 0.75f;
         soldierMovement.soldierSignal = 1f;
     }
