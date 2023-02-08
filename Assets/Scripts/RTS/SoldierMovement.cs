@@ -15,7 +15,7 @@ public class SoldierMovement : MonoBehaviour
 
     [Header("Pathfinding")]
     public GameObject target;
-    Collider2D coll;
+    [SerializeField] Collider2D coll;
     NavMeshAgent agent;
     public bool hasTarget = true;
     public Camera cam;

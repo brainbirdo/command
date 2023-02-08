@@ -8,9 +8,12 @@ public class SandHillsBehaviour : EnviroBehav
     public override void Behaviour(GameObject unit)
     {
         SoldierMovement soldierMovement = unit.GetComponent<SoldierMovement>();
+
         soldierMovement.touchSandHills = true;
-        soldierMovement.soldierSpeed = 0.75f;
+
+        soldierMovement.soldierAttack = 5f;
         soldierMovement.soldierSignal = 4f;
+        soldierMovement.soldierSpeed = 0.75f;
     }
 
 }

@@ -7,9 +7,12 @@ public class WaterBehaviour : EnviroBehav
     public override void Behaviour(GameObject unit)
     {
         SoldierMovement soldierMovement = unit.GetComponent<SoldierMovement>();
+
         soldierMovement.touchWater = true;
-        soldierMovement.soldierSpeed = 0.25f;
+
+        soldierMovement.soldierAttack = 5f;
         soldierMovement.soldierSignal = 2f;
+        soldierMovement.soldierSpeed = 0.25f;
 
     }
 }

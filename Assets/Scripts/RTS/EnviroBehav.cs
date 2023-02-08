@@ -20,8 +20,7 @@ public class EnviroBehav : MonoBehaviour
     {
         if (other.gameObject.GetComponent<SoldierMovement>())
         {
-            // need to reset values
-            Debug.Log("Exit");
+
         }
 
     }
