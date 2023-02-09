@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class SoldierMovement : MonoBehaviour
 {
-    [Header("Soldier Attributes")]
+    [Header("Soldier Stats")]
     public float soldierHealth = 100f; // HP
     public float soldierAttack = 5f; // Attack power
     public float soldierSignal = 5f; // Signal strength for comms
@@ -15,12 +15,12 @@ public class SoldierMovement : MonoBehaviour
 
     [Header("Pathfinding")]
     public GameObject target;
-    [SerializeField] Collider2D coll;
+    Collider2D coll;
     NavMeshAgent agent;
     public bool hasTarget = true;
     public Camera cam;
 
-    [Header("Selection Sprites")]
+    [Header("Selection")]
     public bool isSelected;
     private SpriteRenderer spriteRenderer;
     public Sprite selectedSprite;
@@ -33,8 +33,6 @@ public class SoldierMovement : MonoBehaviour
     public bool touchTrees;
     public bool touchSandHills;
     public bool touchMountains;
-
-    // Add trigger collider to target. When in target's collider, 
 
     void Start()
     {

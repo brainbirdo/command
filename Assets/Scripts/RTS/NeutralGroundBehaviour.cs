@@ -10,15 +10,13 @@ public class NeutralGroundBehaviour : EnviroBehav
 
         soldierMovement.touchNeutralGround = true;
 
-        soldierMovement.soldierAttack = 5f;
-        soldierMovement.soldierSignal = 5f;
-        soldierMovement.soldierSpeed = 1f;
-
-
-
         soldierMovement.touchTrees = false;
         soldierMovement.touchWater = false;
         soldierMovement.touchMountains = false;
         soldierMovement.touchSandHills = false;
+
+        soldierMovement.soldierAttack = 5f;
+        soldierMovement.soldierSignal = 5f;
+        soldierMovement.soldierSpeed = 1f;
     }
 }

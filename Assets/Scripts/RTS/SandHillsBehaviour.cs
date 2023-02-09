@@ -11,6 +11,11 @@ public class SandHillsBehaviour : EnviroBehav
 
         soldierMovement.touchSandHills = true;
 
+        soldierMovement.touchTrees = false;
+        soldierMovement.touchWater = false;
+        soldierMovement.touchMountains= false;
+        soldierMovement.touchNeutralGround = false;
+
         soldierMovement.soldierAttack = 5f;
         soldierMovement.soldierSignal = 4f;
         soldierMovement.soldierSpeed = 0.75f;

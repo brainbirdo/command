@@ -10,6 +10,11 @@ public class TreesBehaviour : EnviroBehav
 
         soldierMovement.touchTrees = true;
 
+        soldierMovement.touchSandHills = false;
+        soldierMovement.touchWater = false;
+        soldierMovement.touchMountains = false;
+        soldierMovement.touchNeutralGround = false;
+
         soldierMovement.soldierAttack = 5f;
         soldierMovement.soldierSignal = 1f;
         soldierMovement.soldierSpeed = 0.75f;

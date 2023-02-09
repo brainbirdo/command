@@ -10,6 +10,11 @@ public class WaterBehaviour : EnviroBehav
 
         soldierMovement.touchWater = true;
 
+        soldierMovement.touchTrees = false;
+        soldierMovement.touchNeutralGround = false;
+        soldierMovement.touchMountains = false;
+        soldierMovement.touchSandHills = false;
+
         soldierMovement.soldierAttack = 5f;
         soldierMovement.soldierSignal = 2f;
         soldierMovement.soldierSpeed = 0.25f;
