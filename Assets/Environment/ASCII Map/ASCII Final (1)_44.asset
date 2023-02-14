@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ASCII Final (1)_44
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 705931967, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
-  m_Color: {r: 0.7384228, g: 0.71949095, b: 0.7830189, a: 1}
+  m_Color: {r: 0.118476324, g: 0.11922414, b: 0.122641504, a: 1}
   m_Transform:
     e00: 1
     e01: 0

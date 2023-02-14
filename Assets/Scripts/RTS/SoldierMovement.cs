@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,13 +14,14 @@ public class SoldierMovement : MonoBehaviour
 
     [Header("Pathfinding")]
     public GameObject target;
-    Collider2D coll;
+    [SerializeField] Collider2D coll;
     NavMeshAgent agent;
     public bool hasTarget = true;
     public Camera cam;
 
     [Header("Selection")]
     public bool isSelected;
+    private bool isSettingTarget = false;
     private SpriteRenderer spriteRenderer;
     public Sprite selectedSprite;
     public Sprite unselectedSprite;
@@ -50,17 +50,14 @@ public class SoldierMovement : MonoBehaviour
 
         agent.speed = soldierSpeed;
 
-        if (hasTarget)
+        if (hasTarget && transform.position == target.transform.position)
         {
-            // Sets and displays Target
-            agent.SetDestination(target.transform.position);
-            target.SetActive(true);
-        }
-        if (!hasTarget)
-        {
-            // Hides Target when there is none
+            // If the unit has reached its target, hide the target object
             target.SetActive(false);
+            hasTarget = false;
+            Debug.Log("Target Hidden");
         }
+
 
         SoldierSelection();
 
@@ -76,16 +73,22 @@ public class SoldierMovement : MonoBehaviour
         // Selects a soldier if clicked, deselects if right clicked
         if (Input.GetMouseButtonDown(0))
         {
-            coll = Physics2D.OverlapPoint(cam.ScreenToWorldPoint(Input.mousePosition));
-            if (coll != null)
+            Collider2D[] hits = Physics2D.OverlapPointAll(cam.ScreenToWorldPoint(Input.mousePosition));
+            foreach (Collider2D hit in hits)
             {
-                isSelected = (coll.gameObject == gameObject);
+                if (hit.CompareTag("Range") && hit.transform.parent == transform)
+                {
+                    isSelected = true;
+                    break;
+                }
             }
         }
 
-        if (Input.GetMouseButtonDown(1) && isSelected) 
+        if (Input.GetMouseButtonDown(1) && isSelected)
         {
             isSelected = false;
+            isSettingTarget = false; // Set isSettingTarget back to false after the target has been set
+
         }
 
         if (isSelected)
@@ -102,15 +105,22 @@ public class SoldierMovement : MonoBehaviour
 
     private void TargetSetting()
     {
-        //Sets a Target for the Soldier to move to
         if (isSelected && Input.GetMouseButtonDown(0))
         {
+            if (!isSettingTarget)
+            {
+                isSettingTarget = true;
+                return; // Exit the method and wait for the next click to set the target
+            }
+
             Vector3 mousePos = Input.mousePosition;
             mousePos = cam.ScreenToWorldPoint(mousePos);
-            mousePos.z = 0;
+            mousePos.z = -0.5833309f;
             target.transform.position = mousePos;
             hasTarget = true;
+            agent.SetDestination(target.transform.position);
             target.SetActive(true);
         }
     }
+
 }
