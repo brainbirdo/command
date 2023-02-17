@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     private int currentWaypointIndex = 0;
     private bool isChasing = false;
 
+    public float damagePerSecond = 1f;
+
     void Start()
     {
         SetNextWaypoint();
@@ -25,6 +27,13 @@ public class Enemy : MonoBehaviour
             if (target != null && Vector2.Distance(transform.position, target.position) <= chaseRange)
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, chaseSpeed * Time.deltaTime);
+
+                // Check if the target is a Soldier and reduce its health by the damage per second
+                SoldierMovement soldier = target.GetComponentInParent<SoldierMovement>();
+                if (soldier != null)
+                {
+                    soldier.soldierHealth -= damagePerSecond * Time.deltaTime;
+                }
             }
             else
             {
@@ -40,10 +49,6 @@ public class Enemy : MonoBehaviour
             {
                 SetNextWaypoint();
             }
-            else if (target != null && Vector2.Distance(transform.position, target.position) <= chaseRange)
-            {
-                isChasing = true;
-            }
         }
     }
 
@@ -54,8 +59,9 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform == target)
+        if (other.CompareTag("Player"))
         {
+            target = other.transform.Find("Range");
             isChasing = true;
         }
     }
@@ -64,6 +70,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.transform == target)
         {
+            target = null;
             isChasing = false;
             SetNextWaypoint();
         }
