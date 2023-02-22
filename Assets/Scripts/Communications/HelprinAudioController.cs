@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CaptainAudioController : MonoBehaviour
+public class HelprinAudioController : MonoBehaviour
 {
+
     [Header("Environment")]
-    [SerializeField] private AudioClip[] treeAlerts;
-    [SerializeField] private AudioClip[] waterAlerts;
-    [SerializeField] private AudioClip[] obstacleAlerts;
-    [SerializeField] private AudioClip[] arrivedAtDestination;
-    [SerializeField] private AudioClip[] orderReceived;
+    [SerializeField] private AudioClip[] rainAlerts;
+    [SerializeField] private AudioClip[] stormAlerts;
 
     [Header("Statistics")]
-    [SerializeField] private AudioClip[] commsOnline;
     [SerializeField] private AudioClip[] losingSignal;
     [SerializeField] private AudioClip[] regainingSignal;
     [SerializeField] private AudioClip[] slightlyInjured;
@@ -22,15 +19,11 @@ public class CaptainAudioController : MonoBehaviour
 
     [Header("Combat")]
     [SerializeField] private AudioClip[] enemySpotted;
-    [SerializeField] private AudioClip[] seenByEnemy;
+    [SerializeField] private AudioClip[] enemyDown;
     [SerializeField] private AudioClip[] allyKilled;
     [SerializeField] private AudioClip[] advancing;
     [SerializeField] private AudioClip[] retreating;
     [SerializeField] private AudioClip[] combatStart;
-    [SerializeField] private AudioClip[] enemyLow;
     [SerializeField] private AudioClip[] idle;
-
-    [Header("Combat")]
-    [SerializeField] private AudioClip[] dialogue;
 
 }

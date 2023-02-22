@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HelprinAudioController : MonoBehaviour
+public class HellerAudioController : MonoBehaviour
 {
-
-    public SoldierMovement soldierMovement;
-
     [Header("Environment")]
     [SerializeField] private AudioClip[] rainAlerts;
     [SerializeField] private AudioClip[] stormAlerts;
@@ -26,18 +23,6 @@ public class HelprinAudioController : MonoBehaviour
     [SerializeField] private AudioClip[] advancing;
     [SerializeField] private AudioClip[] retreating;
     [SerializeField] private AudioClip[] combatStart;
-    [SerializeField] private AudioClip[] enemyLow;
     [SerializeField] private AudioClip[] idle;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
