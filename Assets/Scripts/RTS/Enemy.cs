@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    [Header("Pathfinding")]
     public Transform[] waypoints;
     public float moveSpeed = 2f;
     public float chaseSpeed = 4f;
@@ -13,7 +15,9 @@ public class Enemy : MonoBehaviour
     private int currentWaypointIndex = 0;
     private bool isChasing = false;
 
+    [Header("Stats")]
     public float damagePerSecond = 1f;
+    public float enemyHealth = 100f;
 
     void Start()
     {

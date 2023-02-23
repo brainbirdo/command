@@ -48,6 +48,8 @@ public class SoldierMovement : MonoBehaviour
     void Update()
     {
 
+
+
         agent.speed = soldierSpeed;
 
         if (hasTarget && transform.position == target.transform.position)
