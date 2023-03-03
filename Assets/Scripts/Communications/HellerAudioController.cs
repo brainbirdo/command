@@ -25,4 +25,45 @@ public class HellerAudioController : MonoBehaviour
     [SerializeField] private AudioClip[] combatStart;
     [SerializeField] private AudioClip[] idle;
 
+    [Header("Comms Switching")]
+    public bool isListening;
+    public SoldierMovement soldierMovement;
+
+    [Header("Audio Sources: Ambience")]
+    public AudioSource noSignal;
+    public AudioSource badSignal;
+    public AudioSource goodSignal;
+
+    void Update()
+    {
+        StaticSoundUpdate();
+    }
+
+    void StaticSoundUpdate()
+    {
+        if (isListening)
+        {
+            if (soldierMovement.soldierSignal <= 1f)
+            {
+                noSignal.volume = 0.7f;
+            }
+
+            if (soldierMovement.soldierSignal == 2f)
+            {
+                badSignal.volume = 0.7f;
+            }
+
+            if (soldierMovement.soldierSignal >= 3f)
+            {
+                goodSignal.volume = 0.7f;
+            }
+        }
+
+        if (!isListening)
+        {
+            noSignal.volume = 0f;
+            badSignal.volume = 0f;
+            goodSignal.volume = 0f;
+        }
+    }
 }

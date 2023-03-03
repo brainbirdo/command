@@ -23,41 +23,16 @@ public class SoldierHealth : MonoBehaviour
 
     public void HealthBar()
     {
-        if (soldierMovement.soldierHealth <= 90)
+        for (int i = 0; i < healthBar.Length; i++)
         {
-
-        }
-        if (soldierMovement.soldierHealth <= 80)
-        {
-
-        }
-        if (soldierMovement.soldierHealth <= 70)
-        {
-
-        }
-        if (soldierMovement.soldierHealth <= 60)
-        {
-
-        }
-        if (soldierMovement.soldierHealth <= 50)
-        {
-
-        }
-        if (soldierMovement.soldierHealth <= 40)
-        {
-
-        }
-        if (soldierMovement.soldierHealth <= 30)
-        {
-
-        }
-        if (soldierMovement.soldierHealth <= 20)
-        {
-
-        }
-        if (soldierMovement.soldierHealth <= 10)
-        {
-
+            if ((i + 1) * 10 >= soldierMovement.soldierHealth)
+            {
+                healthBar[i].SetActive(false);
+            }
+            else
+            {
+                healthBar[i].SetActive(true);
+            }
         }
     }
 }

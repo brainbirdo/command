@@ -33,4 +33,7 @@ public class CaptainAudioController : MonoBehaviour
     [Header("Combat")]
     [SerializeField] private AudioClip[] dialogue;
 
+    [Header("Comms Switching")]
+    public bool isListening;
+
 }

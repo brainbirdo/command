@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     private bool isChasing = false;
 
     [Header("Stats")]
-    public float damagePerSecond = 1f;
+    public float damagePerSecond = 5f;
     public float enemyHealth = 100f;
 
     void Start()

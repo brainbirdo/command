@@ -25,6 +25,7 @@ public class SoldierMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Sprite selectedSprite;
     public Sprite unselectedSprite;
+    public GameObject screenSelection;
 
 
     [Header("Environment Checks")]
@@ -66,11 +67,17 @@ public class SoldierMovement : MonoBehaviour
         if (isSelected)
         {
             TargetSetting();
+            screenSelection.SetActive(true);
+        }
+
+        if (!isSelected)
+        {
+            screenSelection.SetActive(false);
         }
     }
 
 
-    private void SoldierSelection()
+        private void SoldierSelection()
     {
         // Selects a soldier if clicked, deselects if right clicked
         if (Input.GetMouseButtonDown(0))

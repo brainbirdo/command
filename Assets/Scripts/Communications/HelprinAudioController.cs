@@ -26,4 +26,6 @@ public class HelprinAudioController : MonoBehaviour
     [SerializeField] private AudioClip[] combatStart;
     [SerializeField] private AudioClip[] idle;
 
+    [Header("Comms Switching")]
+    public bool isListening;
 }
