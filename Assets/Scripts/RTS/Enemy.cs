@@ -79,4 +79,13 @@ public class Enemy : MonoBehaviour
             SetNextWaypoint();
         }
     }
+
+    public void TakeDamage(float damage)
+    {
+        enemyHealth -= damage * Time.deltaTime;
+        if (enemyHealth <= 0f)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

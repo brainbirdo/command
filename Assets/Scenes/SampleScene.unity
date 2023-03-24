@@ -43354,11 +43354,12 @@ MonoBehaviour:
   soldierAttack: 5
   soldierSignal: 5
   soldierSpeed: 5
-  seenByEnemy: 0
+  attackRange: 5
   target: {fileID: 1150618369}
   coll: {fileID: 810560591}
   hasTarget: 0
   cam: {fileID: 963194227}
+  targetEnemy: {fileID: 0}
   isSelected: 0
   selectedSprite: {fileID: 613529443, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
   unselectedSprite: {fileID: 2039997768, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
@@ -51952,11 +51953,12 @@ MonoBehaviour:
   soldierAttack: 5
   soldierSignal: 5
   soldierSpeed: 5
-  seenByEnemy: 0
+  attackRange: 5
   target: {fileID: 1127702567}
   coll: {fileID: 1169197670}
   hasTarget: 0
   cam: {fileID: 963194227}
+  targetEnemy: {fileID: 0}
   isSelected: 0
   selectedSprite: {fileID: 613529443, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
   unselectedSprite: {fileID: 2039997768, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
@@ -52816,11 +52818,12 @@ MonoBehaviour:
   soldierAttack: 5
   soldierSignal: 5
   soldierSpeed: 5
-  seenByEnemy: 0
+  attackRange: 5
   target: {fileID: 1972360016}
   coll: {fileID: 1168675624}
   hasTarget: 0
   cam: {fileID: 963194227}
+  targetEnemy: {fileID: 0}
   isSelected: 0
   selectedSprite: {fileID: 613529443, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
   unselectedSprite: {fileID: 2039997768, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
@@ -73892,11 +73895,12 @@ MonoBehaviour:
   soldierAttack: 5
   soldierSignal: 5
   soldierSpeed: 5
-  seenByEnemy: 0
+  attackRange: 5
   target: {fileID: 1406349305}
   coll: {fileID: 1486603096}
   hasTarget: 0
   cam: {fileID: 963194227}
+  targetEnemy: {fileID: 0}
   isSelected: 0
   selectedSprite: {fileID: 613529443, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
   unselectedSprite: {fileID: 2039997768, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
@@ -87916,11 +87920,12 @@ MonoBehaviour:
   soldierAttack: 5
   soldierSignal: 5
   soldierSpeed: 5
-  seenByEnemy: 0
+  attackRange: 5
   target: {fileID: 1673691}
   coll: {fileID: 607807856}
   hasTarget: 0
   cam: {fileID: 963194227}
+  targetEnemy: {fileID: 0}
   isSelected: 0
   selectedSprite: {fileID: 613529443, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
   unselectedSprite: {fileID: 2039997768, guid: 33eaa0e5862334e48ada7eebe9e520d9, type: 3}
@@ -88391,7 +88396,7 @@ GameObject:
   - component: {fileID: 1959836139}
   m_Layer: 0
   m_Name: Range
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

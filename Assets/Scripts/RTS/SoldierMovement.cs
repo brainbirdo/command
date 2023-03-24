@@ -7,10 +7,10 @@ public class SoldierMovement : MonoBehaviour
 {
     [Header("Soldier Stats")]
     public float soldierHealth = 100f; // HP
-    public float soldierAttack = 5f; // Attack power
+    public float soldierAttack = 5f;
     public float soldierSignal = 5f; // Signal strength for comms
     public float soldierSpeed = 1f; // Movement speed
-    public bool seenByEnemy = false; // If the soldier has been spotted and is being targeted by Enemy.
+    public float attackRange = 5f;
 
     [Header("Pathfinding")]
     public GameObject target;
@@ -18,6 +18,7 @@ public class SoldierMovement : MonoBehaviour
     NavMeshAgent agent;
     public bool hasTarget = true;
     public Camera cam;
+    public GameObject targetEnemy;
 
     [Header("Selection")]
     public bool isSelected;
@@ -132,4 +133,13 @@ public class SoldierMovement : MonoBehaviour
         }
     }
 
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log("Should be Taking Damage for enemy");
+            Enemy enemy = other.GetComponentInParent<Enemy>();
+            enemy.TakeDamage(soldierAttack);
+        }
+    }
 }
