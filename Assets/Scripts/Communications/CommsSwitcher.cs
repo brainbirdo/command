@@ -7,15 +7,197 @@ public class CommsSwitcher : MonoBehaviour
     public bool isListening;
 
     public CaptainAudioController captainAudioController;
+    public SoldierMovement captainMovement;
+
+
     public HellerAudioController hellerAudioController;
+    public SoldierMovement hellerMovement;
+    public AudioSource hellerVoice;
+
+
     public HelprinAudioController helprinAudioController;
+    public SoldierMovement helprinMovement;
+    public AudioSource helprinVoice;
+
+    public AudioSource noSignal;
+    public AudioSource badSignal;
+    public AudioSource goodSignal;
+    public AudioSource gunfire;
+    public AudioSource combatAudio;
+    public AudioSource heartbeat;
 
     void Update()
     {
         Voice001();
         Voice002();
         Voice004();
+        StaticSoundUpdate();
     }
+
+
+    void Start()
+    {
+        noSignal.volume = 0.0f;
+        badSignal.volume = 0.0f;
+        goodSignal.volume = 0.0f;
+        gunfire.volume = 0.0f;
+        combatAudio.volume = 0.0f;
+        heartbeat.volume = 0.7f;
+        hellerVoice.volume = 0.0f;
+        helprinVoice.volume = 0.0f;
+
+    }
+
+    void StaticSoundUpdate()
+    {
+        if (isListening && hellerAudioController.isListening)
+        {
+            if (hellerMovement.soldierSignal <= 1f)
+            {
+                hellerVoice.volume = 0.2f;
+                noSignal.volume = 0.7f;
+                badSignal.volume = 0.0f;
+                goodSignal.volume = 0.0f;
+
+                if (hellerMovement.inCombat)
+                {
+                    gunfire.volume = 0.3f;
+                    combatAudio.volume = 0.3f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!hellerMovement.inCombat)
+                {
+                    gunfire.volume = 0.1f;
+                    combatAudio.volume = 0.1f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
+
+            if (hellerMovement.soldierSignal == 2f)
+            {
+                hellerVoice.volume = 0.5f;
+                badSignal.volume = 0.7f;
+                noSignal.volume = 0.0f;
+                goodSignal.volume = 0.0f;
+
+                if (hellerMovement.inCombat)
+                {
+                    gunfire.volume = 0.5f;
+                    combatAudio.volume = 0.4f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!hellerMovement.inCombat)
+                {
+                    gunfire.volume = 0.2f;
+                    combatAudio.volume = 0.2f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
+
+            if (hellerMovement.soldierSignal >= 3f)
+            {
+                hellerVoice.volume = 0.8f;
+                goodSignal.volume = 0.7f;
+                noSignal.volume = 0.0f;
+                badSignal.volume = 0.0f;
+                if (hellerMovement.inCombat)
+                {
+                    gunfire.volume = 0.7f;
+                    combatAudio.volume = 0.6f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!hellerMovement.inCombat)
+                {
+                    gunfire.volume = 0.3f;
+                    combatAudio.volume = 0.3f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
+        }
+
+        if (isListening && helprinAudioController.isListening)
+        {
+            if (helprinMovement.soldierSignal <= 1f)
+            {
+                helprinVoice.volume = 0.2f;
+                noSignal.volume = 0.7f;
+                badSignal.volume = 0.0f;
+                goodSignal.volume = 0.0f;
+
+                if (helprinMovement.inCombat)
+                {
+                    gunfire.volume = 0.3f;
+                    combatAudio.volume = 0.3f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!helprinMovement.inCombat)
+                {
+                    gunfire.volume = 0.1f;
+                    combatAudio.volume = 0.1f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
+
+            if (helprinMovement.soldierSignal == 2f)
+            {
+                helprinVoice.volume = 0.5f;
+                badSignal.volume = 0.7f;
+                noSignal.volume = 0.0f;
+                goodSignal.volume = 0.0f;
+
+                if (helprinMovement.inCombat)
+                {
+                    gunfire.volume = 0.5f;
+                    combatAudio.volume = 0.4f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!helprinMovement.inCombat)
+                {
+                    gunfire.volume = 0.2f;
+                    combatAudio.volume = 0.2f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
+
+            if (helprinMovement.soldierSignal >= 3f)
+            {
+                helprinVoice.volume = 0.8f;
+                goodSignal.volume = 0.7f;
+                noSignal.volume = 0.0f;
+                badSignal.volume = 0.0f;
+                if (helprinMovement.inCombat)
+                {
+                    gunfire.volume = 0.7f;
+                    combatAudio.volume = 0.6f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!helprinMovement.inCombat)
+                {
+                    gunfire.volume = 0.3f;
+                    combatAudio.volume = 0.3f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
+        }
+
+        if (isListening && captainAudioController.isListening)
+        {
+
+        }
+
+        if (!isListening)
+        {
+            noSignal.volume = 0f;
+            badSignal.volume = 0f;
+            goodSignal.volume = 0f;
+            hellerVoice.volume = 0.0f;
+            helprinVoice.volume = 0.0f;
+            gunfire.volume = 0f;
+            combatAudio.volume = 0f;
+            heartbeat.volume = 0.7f;
+        }
+    }
+
 
     public void Voice001()
     {

@@ -2,22 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MountainBehaviour : EnviroBehav
+public class MountainBehaviour : MonoBehaviour
 {
-    public override void Behaviour(GameObject unit)
+
+    private void OnTriggerStay2D(Collider2D other)
     {
-        SoldierMovement soldierMovement = unit.GetComponent<SoldierMovement>();
+        if (other.CompareTag("Player"))
+        {
+            SoldierMovement soldierMovement = other.gameObject.GetComponent<SoldierMovement>();
 
-        soldierMovement.touchMountains = true;
+            soldierMovement.touchMountains = true;
 
-        soldierMovement.touchSandHills = false;
-        soldierMovement.touchWater = false;
-        soldierMovement.touchTrees = false;
-        soldierMovement.touchNeutralGround = false;
+            soldierMovement.touchSandHills = false;
+            soldierMovement.touchWater = false;
+            soldierMovement.touchTrees = false;
+            soldierMovement.touchNeutralGround = false;
 
-        soldierMovement.soldierAttack = 5f;
-        soldierMovement.soldierSignal = 4f;
-        soldierMovement.soldierSpeed = 0.5f;
+            soldierMovement.soldierAttack = 5f;
+            soldierMovement.soldierSignal = 3f;
+            soldierMovement.soldierSpeed = 0.5f;
+        }
     }
 
 }

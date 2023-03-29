@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
                 if (soldier != null)
                 {
                     soldier.soldierHealth -= damagePerSecond * Time.deltaTime;
+                    transform.GetComponent<SpriteRenderer>().sortingOrder = 8;
                 }
             }
             else

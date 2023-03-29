@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreesBehaviour : EnviroBehav
+public class TreesBehaviour : MonoBehaviour
 {
-    public override void Behaviour(GameObject unit)
+
+    private void OnTriggerStay2D(Collider2D other)
     {
-        SoldierMovement soldierMovement = unit.GetComponent<SoldierMovement>();
+        if (other.CompareTag("Player"))
+        {
+            SoldierMovement soldierMovement = other.gameObject.GetComponent<SoldierMovement>();
 
-        soldierMovement.touchTrees = true;
+            soldierMovement.touchTrees = true;
 
-        soldierMovement.touchSandHills = false;
-        soldierMovement.touchWater = false;
-        soldierMovement.touchMountains = false;
-        soldierMovement.touchNeutralGround = false;
+            soldierMovement.touchSandHills = false;
+            soldierMovement.touchWater = false;
+            soldierMovement.touchMountains = false;
+            soldierMovement.touchNeutralGround = false;
 
-        soldierMovement.soldierAttack = 5f;
-        soldierMovement.soldierSignal = 1f;
-        soldierMovement.soldierSpeed = 0.75f;
+            soldierMovement.soldierAttack = 5f;
+            soldierMovement.soldierSignal = 1f;
+            soldierMovement.soldierSpeed = 0.75f;
+        }
     }
-
 }

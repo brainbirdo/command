@@ -2,22 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterBehaviour : EnviroBehav
+public class WaterBehaviour : MonoBehaviour
 {
-    public override void Behaviour(GameObject unit)
+
+    private void OnTriggerStay2D(Collider2D other)
     {
-        SoldierMovement soldierMovement = unit.GetComponent<SoldierMovement>();
+        if (other.CompareTag("Player"))
+        {
+            SoldierMovement soldierMovement = other.gameObject.GetComponent<SoldierMovement>();
 
-        soldierMovement.touchWater = true;
+            soldierMovement.touchWater = true;
 
-        soldierMovement.touchTrees = false;
-        soldierMovement.touchNeutralGround = false;
-        soldierMovement.touchMountains = false;
-        soldierMovement.touchSandHills = false;
+            soldierMovement.touchTrees = false;
+            soldierMovement.touchNeutralGround = false;
+            soldierMovement.touchMountains = false;
+            soldierMovement.touchSandHills = false;
 
-        soldierMovement.soldierAttack = 5f;
-        soldierMovement.soldierSignal = 2f;
-        soldierMovement.soldierSpeed = 0.25f;
+            soldierMovement.soldierAttack = 5f;
+            soldierMovement.soldierSignal = 2f;
+            soldierMovement.soldierSpeed = 0.25f;
+        }
+            
 
     }
 }

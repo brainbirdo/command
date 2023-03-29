@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NeutralGroundBehaviour : EnviroBehav
+public class NeutralGroundBehaviour : MonoBehaviour
 {
-    public override void Behaviour(GameObject unit)
+
+    private void OnTriggerStay2D(Collider2D other)
     {
-        SoldierMovement soldierMovement = unit.GetComponent<SoldierMovement>();
+        if (other.CompareTag("Player"))
+        {
+            SoldierMovement soldierMovement = other.gameObject.GetComponent<SoldierMovement>();
 
-        soldierMovement.touchNeutralGround = true;
+            soldierMovement.touchNeutralGround = true;
 
-        soldierMovement.touchTrees = false;
-        soldierMovement.touchWater = false;
-        soldierMovement.touchMountains = false;
-        soldierMovement.touchSandHills = false;
+            soldierMovement.touchTrees = false;
+            soldierMovement.touchWater = false;
+            soldierMovement.touchMountains = false;
+            soldierMovement.touchSandHills = false;
 
-        soldierMovement.soldierAttack = 5f;
-        soldierMovement.soldierSignal = 5f;
-        soldierMovement.soldierSpeed = 1f;
+            soldierMovement.soldierAttack = 5f;
+            soldierMovement.soldierSignal = 3f;
+            soldierMovement.soldierSpeed = 1f;
+        }
     }
 }
