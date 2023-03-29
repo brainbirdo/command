@@ -308,19 +308,20 @@ public class HelprinAudioController : MonoBehaviour
             capdead = true;
         }
 
-        if (frazierUnit.soldierHealth <= 0 && !fradead)
+        if (hellerUnit.soldierHealth <= 0 && !heldead)
         {
             helprinVoice.clip = allyKilled[1];
+            helprinVoice.Play();
+            heldead = true;
+        }
+
+        if (frazierUnit.soldierHealth <= 0 && !fradead)
+        {
+            helprinVoice.clip = allyKilled[2];
             helprinVoice.Play();
             fradead = true;
         }
 
-        if (hellerUnit.soldierHealth <= 0 && !heldead)
-        {
-            helprinVoice.clip = allyKilled[2];
-            helprinVoice.Play();
-            heldead = true;
-        }
 
         if (remarqueUnit.soldierHealth <= 0 && !remdead)
         {

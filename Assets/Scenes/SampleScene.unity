@@ -254,7 +254,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372603940}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &15099853
 AudioSource:
@@ -25720,7 +25720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156314131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.96, y: 9.86, z: 0.14175457}
+  m_LocalPosition: {x: -9.4000025, y: 9.3, z: 0.14175457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28299,7 +28299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372603940}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &184329397
 AudioSource:
@@ -40480,7 +40480,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372603940}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &318841511
 AudioSource:
@@ -40492,11 +40492,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 17a62483864edd9498aa738477900d67, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -40832,11 +40832,15 @@ Transform:
   m_Children:
   - {fileID: 1037385003}
   - {fileID: 1672711193}
+  - {fileID: 1001968433}
   - {fileID: 15099852}
   - {fileID: 1545203627}
   - {fileID: 184329396}
   - {fileID: 318841510}
   - {fileID: 1078817435}
+  - {fileID: 382130417}
+  - {fileID: 616949692}
+  - {fileID: 1461850502}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40873,6 +40877,134 @@ Transform:
   m_Father: {fileID: 1342209796}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &382130416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 382130417}
+  - component: {fileID: 382130418}
+  m_Layer: 0
+  m_Name: Storm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &382130417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382130416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 372603940}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &382130418
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382130416}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ab092b5a075ebd5448bc8d867a48ea4d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &402102602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41089,6 +41221,7 @@ MonoBehaviour:
   isListening: 0
   captainAudioController: {fileID: 1656638572}
   captainMovement: {fileID: 1939094507}
+  captainVoice: {fileID: 1001968434}
   hellerAudioController: {fileID: 100157080}
   hellerMovement: {fileID: 812233761}
   hellerVoice: {fileID: 15099853}
@@ -41101,6 +41234,8 @@ MonoBehaviour:
   gunfire: {fileID: 318841511}
   combatAudio: {fileID: 1078817436}
   heartbeat: {fileID: 184329397}
+  rain: {fileID: 616949693}
+  storm: {fileID: 382130418}
 --- !u!4 &445472827
 Transform:
   m_ObjectHideFlags: 0
@@ -41565,7 +41700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506699375}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.55999756, y: 0.47000027, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -41588,12 +41723,17 @@ MonoBehaviour:
   soldierHealth: 100
   soldierAttack: 5
   soldierSignal: 3
-  soldierSpeed: 5
+  soldierSpeed: 1
   attackRange: 5
   isDead: 0
   isAlive: 0
   inCombat: 0
   soldierHealthManager: {fileID: 0}
+  weatherController: {fileID: 806362354}
+  signalChanged: 0
+  stormSignalChanged: 0
+  rainSignalChanged: 0
+  clearSignalChanged: 0
   target: {fileID: 1150618369}
   coll: {fileID: 810560591}
   hasTarget: 0
@@ -44298,6 +44438,134 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+--- !u!1 &616949691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616949692}
+  - component: {fileID: 616949693}
+  m_Layer: 0
+  m_Name: Rain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &616949692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616949691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 372603940}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &616949693
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616949691}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ac28d9cbdfa7ad240818407205c1982a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &630576851
 GameObject:
   m_ObjectHideFlags: 0
@@ -50133,12 +50401,17 @@ MonoBehaviour:
   soldierHealth: 100
   soldierAttack: 5
   soldierSignal: 3
-  soldierSpeed: 5
+  soldierSpeed: 1
   attackRange: 5
   isDead: 0
   isAlive: 0
   inCombat: 0
   soldierHealthManager: {fileID: 0}
+  weatherController: {fileID: 806362354}
+  signalChanged: 0
+  stormSignalChanged: 0
+  rainSignalChanged: 0
+  clearSignalChanged: 0
   target: {fileID: 1127702567}
   coll: {fileID: 1169197670}
   hasTarget: 0
@@ -50448,7 +50721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715137604}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.78, y: 8.36, z: 0.14175457}
+  m_LocalPosition: {x: -8.4000025, y: 8.8, z: 0.14175457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51030,9 +51303,12 @@ MonoBehaviour:
   isClear: 0
   isRainy: 0
   isStormy: 0
+  commsSwitcher: {fileID: 445472826}
   hellerController: {fileID: 100157080}
   helprinController: {fileID: 1067248103}
   captainController: {fileID: 1656638572}
+  rainAudio: {fileID: 616949693}
+  stormAudio: {fileID: 382130418}
 --- !u!1 &810560589
 GameObject:
   m_ObjectHideFlags: 0
@@ -51109,7 +51385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812233759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3899994, y: 0.11000061, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51132,12 +51408,17 @@ MonoBehaviour:
   soldierHealth: 100
   soldierAttack: 5
   soldierSignal: 3
-  soldierSpeed: 5
+  soldierSpeed: 1
   attackRange: 5
   isDead: 0
   isAlive: 0
   inCombat: 0
   soldierHealthManager: {fileID: 0}
+  weatherController: {fileID: 806362354}
+  signalChanged: 0
+  stormSignalChanged: 0
+  rainSignalChanged: 0
+  clearSignalChanged: 0
   target: {fileID: 1972360016}
   coll: {fileID: 1168675624}
   hasTarget: 0
@@ -72027,6 +72308,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1001968432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001968433}
+  - component: {fileID: 1001968434}
+  m_Layer: 0
+  m_Name: CaptainVoice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1001968433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001968432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 372603940}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1001968434
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001968432}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1006813811
 GameObject:
   m_ObjectHideFlags: 0
@@ -72623,12 +73032,17 @@ MonoBehaviour:
   soldierHealth: 100
   soldierAttack: 5
   soldierSignal: 3
-  soldierSpeed: 5
+  soldierSpeed: 1
   attackRange: 5
   isDead: 0
   isAlive: 0
   inCombat: 0
   soldierHealthManager: {fileID: 0}
+  weatherController: {fileID: 806362354}
+  signalChanged: 0
+  stormSignalChanged: 0
+  rainSignalChanged: 0
+  clearSignalChanged: 0
   target: {fileID: 1406349305}
   coll: {fileID: 1486603096}
   hasTarget: 0
@@ -73240,67 +73654,87 @@ MonoBehaviour:
   rainAlertGiven: 0
   stormAlertGiven: 0
   rainAlerts:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 4ec266186d389eb42aa8772c29d6063b, type: 3}
+  - {fileID: 8300000, guid: 2a6064a70a01fd342bf2680d16f7876c, type: 3}
+  - {fileID: 8300000, guid: d8566306ba36ed94aa8f827d7ac2d89a, type: 3}
+  - {fileID: 8300000, guid: 9c1444fd03e37be4b846ad07c65261b3, type: 3}
   stormAlerts:
   - {fileID: 0}
   - {fileID: 0}
   weatherController: {fileID: 806362354}
-  previousSignal: 0
+  previousSignal: 3
   signalLostAlertGiven: 0
   signalGainAlertGiven: 0
   losingSignal:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8e78044e16dabcf468ec65e9dbdb6381, type: 3}
+  - {fileID: 8300000, guid: 782e7f010b2933647a77925cc63d015c, type: 3}
+  - {fileID: 8300000, guid: 9de81e0a721febc46a1d49531ea35054, type: 3}
+  - {fileID: 8300000, guid: a6bf6477279730e44b6e21349adc558f, type: 3}
   regainingSignal:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 3dbb25715a834c449a38e9142ac3972d, type: 3}
+  - {fileID: 8300000, guid: bebee6d3ae958d047805ad98d69afcd7, type: 3}
+  - {fileID: 8300000, guid: 8f3c8c2f1d7ee1347b2fcd530ce19d0b, type: 3}
+  - {fileID: 8300000, guid: 444b3ab9697cd0947a6f77eb60cf0a87, type: 3}
   injuredAlertGiven: 0
   slightlyInjured:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 329612703c44e98448e1326d85c2554c, type: 3}
+  - {fileID: 8300000, guid: d4d1a3f20c269b540beb68e6bf927218, type: 3}
+  - {fileID: 8300000, guid: 74f0720d86d014b4db1413ebc3de4ae3, type: 3}
+  - {fileID: 8300000, guid: 231874b8338499042bc107dc3b8f4a52, type: 3}
   heavilyInjured:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: e5b84e5dc24fde348836eecafe88e15e, type: 3}
+  - {fileID: 8300000, guid: e0db3b2e0569c8c469420fea35ff747e, type: 3}
+  - {fileID: 8300000, guid: ce13ccf0e8e87164db03aa166b296b4e, type: 3}
   deathAlertGiven: 0
   hitAlertGiven: 0
   death:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8e0e83ef21414dc47ad1c5c92ab3cef3, type: 3}
+  - {fileID: 8300000, guid: 90531726e55be554eabff6235c3378ef, type: 3}
   hit:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: c9fb09389dd3a5b4ba7ac3b26e024512, type: 3}
+  - {fileID: 8300000, guid: 5a3ef8f79a3855943961753d3055073a, type: 3}
+  - {fileID: 8300000, guid: 20994ac719cd0934c9396cf112dbb407, type: 3}
+  - {fileID: 8300000, guid: 116373fd471a1954aac1a09ee4bc4d28, type: 3}
+  - {fileID: 8300000, guid: c91df4694f3a8ab46a76caa02979ae4f, type: 3}
+  - {fileID: 8300000, guid: 12a171d444a47f54f839c6c996ef96da, type: 3}
+  - {fileID: 8300000, guid: 32b6eff34e5ba4844af20be116e79aa5, type: 3}
+  - {fileID: 8300000, guid: 3c70e5a72a36d224e9db8d39a5c8c5c0, type: 3}
+  - {fileID: 8300000, guid: f8264ec9f039a6f4aa1499fce33f04a5, type: 3}
   enemySpotted:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 625b3c771dc465b47bd24b697a578d6a, type: 3}
+  - {fileID: 8300000, guid: 901109d63b434d64b9373e689548b085, type: 3}
+  - {fileID: 8300000, guid: efe80c27d2d81654e998e82a83eab8a7, type: 3}
+  - {fileID: 8300000, guid: d0a58c408d179b44c8de495b1e128cb7, type: 3}
   enemyDownAlertGiven: 0
   enemyDown:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 0964721ee57485b4783ce0b044929d66, type: 3}
   captainUnit: {fileID: 1939094507}
   frazierUnit: {fileID: 706839715}
   hellerUnit: {fileID: 812233761}
   remarqueUnit: {fileID: 1048195229}
   allyKilled:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8de4380e732e9b14bb1e1104ab2d65f7, type: 3}
+  - {fileID: 8300000, guid: 42212955edc367c43be835e9e786bcff, type: 3}
+  - {fileID: 8300000, guid: 2e5f1328b5e3e694c95d9b3c99a6ef3a, type: 3}
+  - {fileID: 8300000, guid: 2e00ea347e24e774bbc843f9be2bef00, type: 3}
   advanceAlertGiven: 0
   retreatAlertGiven: 0
   advancing:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: ec78c24e3b5a47d41b955fa1840ccd5c, type: 3}
+  - {fileID: 8300000, guid: c0528e63031614d489ca860701bb9dd6, type: 3}
+  - {fileID: 8300000, guid: 9cf0fab847bc68347a4c99d308103d75, type: 3}
   retreating:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: b143d84d31d36ac428d21eb55c5f2395, type: 3}
+  - {fileID: 8300000, guid: 8622bd7b18a24744dbb96d4510963bb6, type: 3}
+  - {fileID: 8300000, guid: 642771d45de4b34438b0f4dfa6b08b52, type: 3}
+  - {fileID: 8300000, guid: 17f8b7888cae6444f8f6cb56da89d494, type: 3}
   combatAlertGiven: 0
   combatStart:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 4b3d9fc1e78a4fc49801ac12ea1882a0, type: 3}
+  - {fileID: 8300000, guid: 5d89c0f906dbea140a535bd29ea7ecfe, type: 3}
+  - {fileID: 8300000, guid: b0cc2303bd1256a40b774893a655e22e, type: 3}
+  - {fileID: 8300000, guid: 4bfc6e9b5877295449f2f52003613351, type: 3}
+  - {fileID: 8300000, guid: eaafbf791402e4247bdac890029028d0, type: 3}
   idle:
   - {fileID: 0}
   - {fileID: 0}
@@ -73485,7 +73919,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372603940}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1078817436
 AudioSource:
@@ -73497,11 +73931,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5f0fcf7e0fa2a0345956699c99176bce, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -78748,6 +79182,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1461850501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461850502}
+  - component: {fileID: 1461850503}
+  m_Layer: 0
+  m_Name: ExitGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1461850502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461850501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 372603940}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1461850503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461850501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf257d37e96a5a04cba56269b3757811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSwitch: {fileID: 1874194344}
 --- !u!1 &1467865094
 GameObject:
   m_ObjectHideFlags: 0
@@ -79991,7 +80470,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 372603940}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1545203628
 AudioSource:
@@ -81383,28 +81862,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a9a5f673f489a4a871450c3c553b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeAlerts: []
-  waterAlerts: []
-  obstacleAlerts: []
-  arrivedAtDestination: []
-  orderReceived: []
-  commsOnline: []
-  losingSignal: []
-  regainingSignal: []
-  slightlyInjured: []
-  heavilyInjured: []
-  death: []
-  hit: []
-  enemySpotted: []
-  seenByEnemy: []
-  allyKilled: []
-  advancing: []
-  retreating: []
-  combatStart: []
-  enemyLow: []
-  idle: []
-  dialogue: []
+  treeAlertGiven: 0
+  waterAlertGiven: 0
+  treeAlerts:
+  - {fileID: 8300000, guid: f0b422779d216124a920a89f4a682331, type: 3}
+  waterAlerts:
+  - {fileID: 8300000, guid: 01d03446af0caf04d91afb94471d1b59, type: 3}
+  - {fileID: 8300000, guid: 1d875905937ef6943891cf5bf66f6a91, type: 3}
+  weatherController: {fileID: 806362354}
+  previousSignal: 3
+  signalLostAlertGiven: 0
+  signalGainAlertGiven: 0
+  losingSignal:
+  - {fileID: 8300000, guid: 56648bca2951b844aa9c9c47b984e8c7, type: 3}
+  - {fileID: 8300000, guid: fc8e937f33b81294fa5a80f281b743ed, type: 3}
+  - {fileID: 8300000, guid: f80a76e979fd3fe46b1de715344671fd, type: 3}
+  - {fileID: 8300000, guid: 9f7b2da9bf39412489551827f4205d17, type: 3}
+  regainingSignal:
+  - {fileID: 8300000, guid: 525a753f6e6ca114388fe71931cbc810, type: 3}
+  - {fileID: 8300000, guid: 1ad9a88e8c90f184da5da306ac2e6948, type: 3}
+  injuredAlertGiven: 0
+  slightlyInjured:
+  - {fileID: 8300000, guid: 6905d74e04355034f9701346c6a42334, type: 3}
+  - {fileID: 8300000, guid: ae0f791d191d95046b4a5edd67da5194, type: 3}
+  - {fileID: 8300000, guid: 574898409cfbc6c439b6d60744b9e2fa, type: 3}
+  heavilyInjured:
+  - {fileID: 8300000, guid: ed322b896c4da3e428f6a2237d9bc360, type: 3}
+  - {fileID: 8300000, guid: 118406168f0f69745831ac49581b88b4, type: 3}
+  - {fileID: 8300000, guid: 2c353320def935c4f858ed6ed478a0ca, type: 3}
+  deathAlertGiven: 0
+  hitAlertGiven: 0
+  death:
+  - {fileID: 8300000, guid: f30e211064934714b91e2060cac54c2c, type: 3}
+  - {fileID: 8300000, guid: d7ca8cb07b5cec349bfe641a79b4e349, type: 3}
+  - {fileID: 8300000, guid: 2450ef5761f2acc4596ef7dbb63350cf, type: 3}
+  - {fileID: 8300000, guid: 0ee1097896d7b3b45880effefd0dee54, type: 3}
+  - {fileID: 8300000, guid: 4cb2e5c453f497444ae0676eda9fcfdd, type: 3}
+  - {fileID: 8300000, guid: 69fed2210fea67148a282407f6904363, type: 3}
+  hit:
+  - {fileID: 8300000, guid: d9a9c8cc523d91245b96c643d17e714a, type: 3}
+  - {fileID: 8300000, guid: 47f78b86b728997428577b43d9467969, type: 3}
+  enemySpotted:
+  - {fileID: 8300000, guid: 4ffb0c5de54689441885130416a99367, type: 3}
+  - {fileID: 8300000, guid: 4898300fb92d0cf49837be49c3a9482f, type: 3}
+  - {fileID: 8300000, guid: e3a2adaa2c6dd4e498281f1a4c3f0a48, type: 3}
+  enemyDownAlertGiven: 0
+  enemyDown:
+  - {fileID: 8300000, guid: c77bee6a0f48acf48b2917f2d2955dde, type: 3}
+  - {fileID: 8300000, guid: f56dccae1f56378408c89db414afac14, type: 3}
+  - {fileID: 8300000, guid: 23e0345bfe3ba994b863ab9d0b472de9, type: 3}
+  - {fileID: 8300000, guid: 1bd9d67958155554892691bae232c204, type: 3}
+  hellerUnit: {fileID: 812233761}
+  frazierUnit: {fileID: 706839715}
+  helprinUnit: {fileID: 506699377}
+  remarqueUnit: {fileID: 1048195229}
+  allyKilled:
+  - {fileID: 8300000, guid: 07c6096dc1dfe864aa928945fb99f4f5, type: 3}
+  - {fileID: 8300000, guid: 1ff1fcda832812e4db57f6b0edba228a, type: 3}
+  - {fileID: 8300000, guid: e476225e52348a64e80f95e2d94be592, type: 3}
+  - {fileID: 8300000, guid: 3b73fa1449811f945b29944307ba9a7f, type: 3}
+  advanceAlertGiven: 0
+  retreatAlertGiven: 0
+  advancing:
+  - {fileID: 8300000, guid: c243a24045a12274a8baac8b5c4063b4, type: 3}
+  - {fileID: 8300000, guid: d3c7d7473ab596b41b25c017cbf253e5, type: 3}
+  - {fileID: 8300000, guid: 6cc1fc5e7987a374fa8e563e26d170f1, type: 3}
+  - {fileID: 8300000, guid: e6ee97ba81609024e8977935f8bf37e1, type: 3}
+  - {fileID: 8300000, guid: e28f39750fe0a4f46b556a7c325ae977, type: 3}
+  retreating:
+  - {fileID: 8300000, guid: 03db2237c64927247aae79addf19859f, type: 3}
+  - {fileID: 8300000, guid: a0188c721691dc44d9e3f95304c617d6, type: 3}
+  - {fileID: 8300000, guid: 153271798c566574aaa17fa902a9b165, type: 3}
+  combatAlertGiven: 0
+  combatStart:
+  - {fileID: 8300000, guid: 7f332961bbad6e6489360c7ce38df86b, type: 3}
+  - {fileID: 8300000, guid: a40cd50dfa97ffc41a0b6a191686187e, type: 3}
+  idle:
+  - {fileID: 8300000, guid: 7f332961bbad6e6489360c7ce38df86b, type: 3}
   isListening: 0
+  soldierMovement: {fileID: 1939094507}
+  captainVoice: {fileID: 1001968434}
+  narrativeAudio:
+  - {fileID: 8300000, guid: e4b15d89c01a3514599b6b781179023e, type: 3}
+  - {fileID: 8300000, guid: fab503cff3186004792e0f49d58a59ab, type: 3}
+  - {fileID: 8300000, guid: 96e83b6abc9127a46a014841af39237a, type: 3}
+  - {fileID: 8300000, guid: 477ddc6a5a8d4a047bcd14ade878c245, type: 3}
+  - {fileID: 8300000, guid: de1472466dc448045b1c3b061f7ba3c1, type: 3}
+  - {fileID: 8300000, guid: 1c5ccf3c26e87c545873865ce6aca2c6, type: 3}
+  escapeAttempt: 0
+  exitGame: {fileID: 0}
+  borders: {fileID: 2036262666}
+  range: {fileID: 0}
 --- !u!1 &1671882629
 GameObject:
   m_ObjectHideFlags: 0
@@ -87218,6 +87766,7 @@ MonoBehaviour:
   camera1: {fileID: 943038535}
   camera2: {fileID: 2036100620}
   camera3: {fileID: 963194227}
+  onCameraMain: 0
 --- !u!4 &1874194345
 Transform:
   m_ObjectHideFlags: 0
@@ -93076,7 +93625,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939094502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.48, y: 9.16, z: 0}
+  m_LocalPosition: {x: -3.2500043, y: 9.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -93177,12 +93726,17 @@ MonoBehaviour:
   soldierHealth: 100
   soldierAttack: 5
   soldierSignal: 3
-  soldierSpeed: 5
+  soldierSpeed: 1
   attackRange: 5
   isDead: 0
   isAlive: 0
   inCombat: 0
   soldierHealthManager: {fileID: 0}
+  weatherController: {fileID: 806362354}
+  signalChanged: 0
+  stormSignalChanged: 0
+  rainSignalChanged: 0
+  clearSignalChanged: 0
   target: {fileID: 1673691}
   coll: {fileID: 607807856}
   hasTarget: 0
@@ -93197,7 +93751,7 @@ MonoBehaviour:
   touchTrees: 0
   touchSandHills: 0
   touchMountains: 0
-  captainAudio: {fileID: 0}
+  captainAudio: {fileID: 1656638572}
   helprinAudio: {fileID: 0}
   hellerAudio: {fileID: 0}
 --- !u!195 &1939094508
@@ -94389,6 +94943,8 @@ GameObject:
   - component: {fileID: 2036262662}
   - component: {fileID: 2036262660}
   - component: {fileID: 2036262664}
+  - component: {fileID: 2036262666}
+  - component: {fileID: 2036262665}
   m_Layer: 3
   m_Name: Boundaries
   m_TagString: NavMesh
@@ -96761,6 +97317,70 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!66 &2036262665
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036262657}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0.47
+  m_ColliderPaths:
+  - m_Collider: {fileID: 2036262666}
+    m_ColliderPaths:
+    - - X: 360000000
+        Y: 210000000
+      - X: -360000000
+        Y: 210000000
+      - X: -360000000
+        Y: -190000000
+      - X: 360000000
+        Y: -190000000
+    - - X: -350000000
+        Y: -180000000
+      - X: -350000000
+        Y: 200000000
+      - X: 350000000
+        Y: 200000000
+      - X: 350000000
+        Y: -180000000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 35.999973, y: -19}
+      - {x: 35.999973, y: 21}
+      - {x: -36, y: 20.999971}
+      - {x: -35.999973, y: -19}
+    - - {x: 35, y: -17.999971}
+      - {x: -35, y: -17.999971}
+      - {x: -34.999973, y: 20}
+      - {x: 35, y: 19.999971}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!19719996 &2036262666
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036262657}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &2056654903
 GameObject:
   m_ObjectHideFlags: 0

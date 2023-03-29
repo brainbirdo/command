@@ -8,6 +8,7 @@ public class CommsSwitcher : MonoBehaviour
 
     public CaptainAudioController captainAudioController;
     public SoldierMovement captainMovement;
+    public AudioSource captainVoice;
 
 
     public HellerAudioController hellerAudioController;
@@ -25,6 +26,8 @@ public class CommsSwitcher : MonoBehaviour
     public AudioSource gunfire;
     public AudioSource combatAudio;
     public AudioSource heartbeat;
+    public AudioSource rain;
+    public AudioSource storm;
 
     void Update()
     {
@@ -32,6 +35,12 @@ public class CommsSwitcher : MonoBehaviour
         Voice002();
         Voice004();
         StaticSoundUpdate();
+
+        if (!isListening)
+        {
+            rain.volume = 0.0f;
+            storm.volume = 0.0f;
+        }
     }
 
 
@@ -43,9 +52,11 @@ public class CommsSwitcher : MonoBehaviour
         gunfire.volume = 0.0f;
         combatAudio.volume = 0.0f;
         heartbeat.volume = 0.7f;
+        captainVoice.volume = 0.0f;
         hellerVoice.volume = 0.0f;
         helprinVoice.volume = 0.0f;
-
+        rain.volume = 0.0f;
+        storm.volume = 0.0f;
     }
 
     void StaticSoundUpdate()
@@ -61,14 +72,14 @@ public class CommsSwitcher : MonoBehaviour
 
                 if (hellerMovement.inCombat)
                 {
-                    gunfire.volume = 0.3f;
-                    combatAudio.volume = 0.3f;
+                    gunfire.volume = 0.2f;
+                    combatAudio.volume = 0.1f;
                     heartbeat.volume = 0.9f;
                 }
                 if (!hellerMovement.inCombat)
                 {
-                    gunfire.volume = 0.1f;
-                    combatAudio.volume = 0.1f;
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
                     heartbeat.volume = 0.7f;
                 }
             }
@@ -82,14 +93,13 @@ public class CommsSwitcher : MonoBehaviour
 
                 if (hellerMovement.inCombat)
                 {
-                    gunfire.volume = 0.5f;
-                    combatAudio.volume = 0.4f;
-                    heartbeat.volume = 0.9f;
+                    gunfire.volume = 0.3f;
+                    combatAudio.volume = 0.1f;
                 }
                 if (!hellerMovement.inCombat)
                 {
-                    gunfire.volume = 0.2f;
-                    combatAudio.volume = 0.2f;
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
                     heartbeat.volume = 0.7f;
                 }
             }
@@ -102,14 +112,14 @@ public class CommsSwitcher : MonoBehaviour
                 badSignal.volume = 0.0f;
                 if (hellerMovement.inCombat)
                 {
-                    gunfire.volume = 0.7f;
-                    combatAudio.volume = 0.6f;
+                    gunfire.volume = 0.4f;
+                    combatAudio.volume = 0.1f;
                     heartbeat.volume = 0.9f;
                 }
                 if (!hellerMovement.inCombat)
                 {
-                    gunfire.volume = 0.3f;
-                    combatAudio.volume = 0.3f;
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
                     heartbeat.volume = 0.7f;
                 }
             }
@@ -126,14 +136,14 @@ public class CommsSwitcher : MonoBehaviour
 
                 if (helprinMovement.inCombat)
                 {
-                    gunfire.volume = 0.3f;
-                    combatAudio.volume = 0.3f;
+                    gunfire.volume = 0.2f;
+                    combatAudio.volume = 0.1f;
                     heartbeat.volume = 0.9f;
                 }
                 if (!helprinMovement.inCombat)
                 {
-                    gunfire.volume = 0.1f;
-                    combatAudio.volume = 0.1f;
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
                     heartbeat.volume = 0.7f;
                 }
             }
@@ -147,14 +157,14 @@ public class CommsSwitcher : MonoBehaviour
 
                 if (helprinMovement.inCombat)
                 {
-                    gunfire.volume = 0.5f;
-                    combatAudio.volume = 0.4f;
+                    gunfire.volume = 0.3f;
+                    combatAudio.volume = 0.1f;
                     heartbeat.volume = 0.9f;
                 }
                 if (!helprinMovement.inCombat)
                 {
-                    gunfire.volume = 0.2f;
-                    combatAudio.volume = 0.2f;
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
                     heartbeat.volume = 0.7f;
                 }
             }
@@ -167,14 +177,14 @@ public class CommsSwitcher : MonoBehaviour
                 badSignal.volume = 0.0f;
                 if (helprinMovement.inCombat)
                 {
-                    gunfire.volume = 0.7f;
-                    combatAudio.volume = 0.6f;
+                    gunfire.volume = 0.4f;
+                    combatAudio.volume = 0.1f;
                     heartbeat.volume = 0.9f;
                 }
                 if (!helprinMovement.inCombat)
                 {
-                    gunfire.volume = 0.3f;
-                    combatAudio.volume = 0.3f;
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
                     heartbeat.volume = 0.7f;
                 }
             }
@@ -182,7 +192,67 @@ public class CommsSwitcher : MonoBehaviour
 
         if (isListening && captainAudioController.isListening)
         {
+            if (captainMovement.soldierSignal <= 1f)
+            {
+                captainVoice.volume = 0.2f;
+                noSignal.volume = 0.7f;
+                badSignal.volume = 0.0f;
+                goodSignal.volume = 0.0f;
 
+                if (captainMovement.inCombat)
+                {
+                    gunfire.volume = 0.2f;
+                    combatAudio.volume = 0.1f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!captainMovement.inCombat)
+                {
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
+
+            if (captainMovement.soldierSignal == 2f)
+            {
+                captainVoice.volume = 0.5f;
+                badSignal.volume = 0.7f;
+                noSignal.volume = 0.0f;
+                goodSignal.volume = 0.0f;
+
+                if (captainMovement.inCombat)
+                {
+                    gunfire.volume = 0.3f;
+                    combatAudio.volume = 0.1f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!captainMovement.inCombat)
+                {
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
+
+            if (captainMovement.soldierSignal >= 3f)
+            {
+                captainVoice.volume = 0.8f;
+                goodSignal.volume = 0.7f;
+                noSignal.volume = 0.0f;
+                badSignal.volume = 0.0f;
+                if (captainMovement.inCombat)
+                {
+                    gunfire.volume = 0.4f;
+                    combatAudio.volume = 0.1f;
+                    heartbeat.volume = 0.9f;
+                }
+                if (!captainMovement.inCombat)
+                {
+                    gunfire.volume = 0.0f;
+                    combatAudio.volume = 0.0f;
+                    heartbeat.volume = 0.7f;
+                }
+            }
         }
 
         if (!isListening)
@@ -190,6 +260,7 @@ public class CommsSwitcher : MonoBehaviour
             noSignal.volume = 0f;
             badSignal.volume = 0f;
             goodSignal.volume = 0f;
+            captainVoice.volume = 0f;
             hellerVoice.volume = 0.0f;
             helprinVoice.volume = 0.0f;
             gunfire.volume = 0f;

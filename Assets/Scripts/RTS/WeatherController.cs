@@ -10,9 +10,13 @@ public class WeatherController : MonoBehaviour
     public bool isRainy;
     public bool isStormy;
 
+    public CommsSwitcher commsSwitcher;
     public HellerAudioController hellerController;
     public HelprinAudioController helprinController;
     public CaptainAudioController captainController;
+
+    public AudioSource rainAudio;
+    public AudioSource stormAudio;
 
     void Start()
     {
@@ -31,12 +35,15 @@ public class WeatherController : MonoBehaviour
         switch (randomNumber)
         {
             case 0:
+                Debug.Log("Clear");
                 ClearSkies();
                 break;
             case 1:
+                Debug.Log("Rain");
                 RainOn();
                 break;
             case 2:
+                Debug.Log("Storm");
                 StormOn();
                 break;
         }
@@ -49,6 +56,10 @@ public class WeatherController : MonoBehaviour
         isStormy = false;
         hellerController.rainAlertGiven = false;
         hellerController.stormAlertGiven = false;
+        helprinController.rainAlertGiven = false;
+        helprinController.stormAlertGiven = false;
+        stormAudio.volume = 0.0f;
+        rainAudio.volume = 0.0f;
     }
 
     void RainOn()
@@ -57,6 +68,17 @@ public class WeatherController : MonoBehaviour
         isClear = false;
         isStormy = false;
         hellerController.stormAlertGiven = false;
+        helprinController.stormAlertGiven = false;
+        if (commsSwitcher.isListening)
+        {
+            stormAudio.volume = 0.0f;
+            rainAudio.volume = 0.8f;
+        }
+        if (!commsSwitcher.isListening)
+        {
+            stormAudio.volume = 0.0f;
+            rainAudio.volume = 0.0f;
+        }
     }
 
     void StormOn()
@@ -65,5 +87,18 @@ public class WeatherController : MonoBehaviour
         isClear = false;
         isRainy = false;
         hellerController.rainAlertGiven = false;
+        helprinController.rainAlertGiven = false;
+
+        if (commsSwitcher.isListening)
+        {
+            stormAudio.volume = 0.4f;
+            rainAudio.volume = 0.0f;
+        }
+        if (!commsSwitcher.isListening)
+        {
+            stormAudio.volume = 0.0f;
+            rainAudio.volume = 0.0f;
+        }
+
     }
 }

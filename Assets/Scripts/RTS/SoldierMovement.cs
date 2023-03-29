@@ -15,6 +15,11 @@ public class SoldierMovement : MonoBehaviour
     public bool isAlive;
     public bool inCombat;
     public SoldierHealth soldierHealthManager;
+    public WeatherController weatherController;
+    public bool signalChanged;
+    public bool stormSignalChanged;
+    public bool rainSignalChanged;
+    public bool clearSignalChanged;
 
     [Header("Pathfinding")]
     public GameObject target;
@@ -77,6 +82,7 @@ public class SoldierMovement : MonoBehaviour
 
 
         SoldierSelection();
+        WeatherChecks();
 
         if (isSelected)
         {
@@ -161,10 +167,46 @@ public class SoldierMovement : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             inCombat = false;
-            //captainAudio.combatAlertGiven = false;
+            captainAudio.combatAlertGiven = false;
             helprinAudio.combatAlertGiven = false;
             hellerAudio.combatAlertGiven = false;
-
         }
+    }
+
+    private void WeatherChecks()
+    {
+        if (weatherController.isRainy && !rainSignalChanged)
+        {
+            stormSignalChanged = false;
+            clearSignalChanged = false;
+
+            if(soldierSignal >= 2f)
+            {
+                soldierSignal -= 1f;
+                rainSignalChanged = true;
+            }
+        }
+        else if (weatherController.isStormy && !stormSignalChanged)
+        {
+            rainSignalChanged = false;
+            clearSignalChanged = false;
+
+            if (soldierSignal >= 2f)
+            {
+                soldierSignal -= 1f;
+                stormSignalChanged = true;
+            }
+        }
+        else if (weatherController.isClear && !clearSignalChanged)
+        {
+            stormSignalChanged = false;
+            rainSignalChanged = false;
+            if (soldierSignal <= 2f)
+            {
+                soldierSignal += 1f;
+                clearSignalChanged = true;
+            }
+        }
+
     }
 }
