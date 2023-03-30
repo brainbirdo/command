@@ -40,6 +40,8 @@ public class CommsSwitcher : MonoBehaviour
         {
             rain.volume = 0.0f;
             storm.volume = 0.0f;
+            gunfire.volume = 0.0f;
+            combatAudio.volume = 0.0f;
         }
     }
 

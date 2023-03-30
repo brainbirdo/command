@@ -180,7 +180,7 @@ public class SoldierMovement : MonoBehaviour
             stormSignalChanged = false;
             clearSignalChanged = false;
 
-            if(soldierSignal >= 2f)
+            if(soldierSignal == 3f)
             {
                 soldierSignal -= 1f;
                 rainSignalChanged = true;
@@ -191,7 +191,7 @@ public class SoldierMovement : MonoBehaviour
             rainSignalChanged = false;
             clearSignalChanged = false;
 
-            if (soldierSignal >= 2f)
+            if (soldierSignal  == 3f)
             {
                 soldierSignal -= 1f;
                 stormSignalChanged = true;
@@ -201,7 +201,7 @@ public class SoldierMovement : MonoBehaviour
         {
             stormSignalChanged = false;
             rainSignalChanged = false;
-            if (soldierSignal <= 2f)
+            if (soldierSignal < 3f)
             {
                 soldierSignal += 1f;
                 clearSignalChanged = true;
